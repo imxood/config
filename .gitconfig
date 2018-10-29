@@ -1,6 +1,10 @@
+[core]
+	quotepath = false
 [user]
 	email = imxood@gmail.com
-	name = mx
+	name = imxood
+[push]
+	default = simple
 [http]
 	proxy = socks5://127.0.0.1:1080
 [https]
