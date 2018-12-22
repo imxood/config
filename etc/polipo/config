@@ -9,4 +9,4 @@ socksParentProxy = "127.0.0.1:1080"
 socksProxyType = socks5
 
 # web port
-proxyPort = 1080
+proxyPort = 1081
