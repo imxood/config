@@ -1,4 +1,5 @@
-
+logSyslog = true
+logFile = /var/log/polipo/polipo.log
 
 # 设置本地代理地址
 proxyAddress = "::0"
