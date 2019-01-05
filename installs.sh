@@ -1,13 +1,18 @@
 #!/bin/bash
 set -e
 
-sudo apt autoremove -y firefox
+# remove not need software
+sudo apt autoremove -y firefox thunderbird
 
-sudo apt install -y vim chromium-browser git make cmake openjdk-8-jdk openocd supervisor python3 python3-pip curl polipo shadowsocks net-tools fcitx-googlepinyin lftp
+# tools
+sudo apt install -y vim chromium-browser git make cmake openjdk-8-jdk openocd supervisor python3 python3-pip curl polipo shadowsocks net-tools fcitx-googlepinyin lftp xclip aria2 fish
 
 # update pip3, set tsinghua mirror
-pip install pip -U
+sudo pip install pip -U
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# develop tools
+sudo apt install global libncurses5-dev libncursesw5-dev -y
 
 # web proxy
 if [ ! -f "/etc/polipo/config" ]; then
@@ -26,7 +31,7 @@ fi
 
 sudo supervisorctl reload
 
-# install vscode
+# Install vscode
 if [ ! -f /usr/bin/code ]; then
 	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 	sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -35,3 +40,15 @@ if [ ! -f /usr/bin/code ]; then
 
 	sudo apt update && sudo apt install code
 fi
+
+# sudo apt install -y libnvidia-compute-415 libnvidia-compute-415 libnvidia-gl-415 nvidia-utils-415 xserver-xorg-video-nvidia-415 libnvidia-cfg1-415 libnvidia-ifr1-415
+
+# Install nvidia driver
+sudo apt install nvidia-390 -y
+
+# Install qt5
+sudo apt install -y qtcreator
+
+# Install documentation and examples
+sudo apt install -y qt5-doc qt5-doc-html qtbase5-examples qtbase5-doc-html
+

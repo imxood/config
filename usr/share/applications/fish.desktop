@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Fish Shell
+Comment=Use the command line
+Keywords=shell;prompt;command;commandline;cmd;
+TryExec=fish
+Exec=fish
+Icon=utilities-terminal
+Type=Application
+Terminal=true
+StartupNotify=true
+
+[Desktop Action new-window]
+Name=New Terminal
+Exec=fish
