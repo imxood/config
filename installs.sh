@@ -11,11 +11,13 @@ sudo apt install -y vim chromium-browser git make cmake openjdk-8-jdk openocd su
 sudo apt install -y dphys-swapfile
 
 sudo sh -c "echo CONF_SWAPSIZE=1024" >> /etc/dphys-swapfile
-
 sudo systemctl restart dphys-swapfile.service
 
 # chinese language package
 sudo apt install -y language-pack-zh-han*
+
+# chinese font
+sudo apt install -y ttf-wqy-zenhei
 
 # aria2
 sudo apt install -y aria2
