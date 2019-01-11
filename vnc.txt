@@ -1,0 +1,12 @@
+搬瓦工 速度测试
+
+DC8 CN2:
+    https://dc8.bwg.net/speedtest
+        下载速度30.92Mbps 上传速度22.30Mbps  平均延迟297.27ms 延迟波动418.19ms
+        下载速度24.95Mbps 上传速度24.02Mbps  平均延迟296.40ms 延迟波动609.00ms
+        下载速度24.91Mbps 上传速度17.94Mbps  平均延迟296.40ms 延迟波动358.53ms
+
+DC3 CN2:
+    https://dc3.bwg.net/speedtest
+        下载速度17.65Mbps 上传速度2.19Mbps  平均延迟148.30ms 延迟波动263.44ms
+        下载速度17.82Mbps 上传速度21.97Mbps  平均延迟295.27ms 延迟波动461.14ms

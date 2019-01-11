@@ -8,6 +8,7 @@ Icon=utilities-terminal
 Type=Application
 Terminal=true
 StartupNotify=true
+Actions=new-window
 
 [Desktop Action new-window]
 Name=New Terminal

@@ -7,6 +7,20 @@ sudo apt autoremove -y firefox thunderbird
 # tools
 sudo apt install -y vim chromium-browser git make cmake openjdk-8-jdk openocd supervisor python3 python3-pip curl polipo shadowsocks net-tools fcitx-googlepinyin lftp xclip aria2 fish
 
+# swap tool
+sudo apt install -y dphys-swapfile
+
+sudo sh -c "echo CONF_SWAPSIZE=1024" >> /etc/dphys-swapfile
+
+sudo systemctl restart dphys-swapfile.service
+
+# aria2
+sudo apt install -y aria2
+if [ ! -f "/etc/aria2.conf" ]; then
+	sudo wget --show-progress https://raw.githubusercontent.com/imxood/config/master/etc/aria2.conf -N -P /etc/
+fi
+
+
 # update pip3, set tsinghua mirror
 sudo pip install pip -U
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
