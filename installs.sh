@@ -14,10 +14,14 @@ sudo sh -c "echo CONF_SWAPSIZE=1024" >> /etc/dphys-swapfile
 
 sudo systemctl restart dphys-swapfile.service
 
+# chinese language package
+sudo apt install -y language-pack-zh-han*
+
 # aria2
 sudo apt install -y aria2
 if [ ! -f "/etc/aria2.conf" ]; then
 	sudo wget --show-progress https://raw.githubusercontent.com/imxood/config/master/etc/aria2.conf -N -P /etc/
+	sudo wget --show-progress https://raw.githubusercontent.com/imxood/config/master/etc/supervisor/conf.d/aria2c.conf -N -P /etc/supervisor/conf.d/
 fi
 
 
