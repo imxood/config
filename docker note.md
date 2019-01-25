@@ -2,6 +2,9 @@
 
 ~~~shell
 
+# 交互式ubuntu
+docker run -i -t -d ubuntu:18.04
+
 # 创建一个容器, 并运行
 docker run -d --name v2ray -v /etc/v2ray:/etc/v2ray -p 8000:8000 v2ray/official  v2ray -config=/etc/v2ray/config.json
 
@@ -104,5 +107,27 @@ Commands:
     unpause            Unpause services
     up                 Create and start containers
     version            Show the Docker-Compose version information  # 创建并启动容器
+
+
+# http://blog.justwe.site/2018/06/28/docker-arg-env
+arg 是在 build 的时候存在的, 可以在 Dockerfile 中当做变量来使用
+env 是容器构建好之后的环境变量, 不能在 Dockerfile 中当参数使用
+
+
+# 终止整个服务集合
+docker-compose stop
+
+# 终止指定的服务 （这有个点就是启动的时候会先启动 depond_on 中的容器，关闭的时候不会影响到 depond_on 中的）
+docker-compose stop nginx
+
+# 查看容器的输出日志
+docker-compose logs -f [services...]
+
+# 构建镜像时不使用缓存（能避免很多因为缓存造成的问题）
+docker-compose build --no-cache --force-rm
+
+# 移除指定的容器
+docker-compose rm nginx
+
 
 ~~~

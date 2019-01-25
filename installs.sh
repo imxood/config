@@ -115,3 +115,8 @@ sudo apt install -y qtcreator
 # Install documentation and examples
 sudo apt install -y qt5-doc qt5-doc-html qtbase5-examples qtbase5-doc-html
 
+
+
+sudo apt install faenza-icon-theme
+
+https://store.kde.org/p/998901/
